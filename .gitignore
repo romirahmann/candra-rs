@@ -13,8 +13,8 @@ node_modules/
 npm-debug.log*
 yarn-error.log*
 
-# Environment files
-*.env
+# Environment folders
+env/
 
 # IDEs and editors
 .idea/
