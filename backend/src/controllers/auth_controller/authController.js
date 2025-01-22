@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+const argon2 = require("argon2");
 const model = require("../../models/auth.model");
 const api = require("../../tools/common");
 const { generateToken } = require("../../services/auth.service");
@@ -12,7 +12,7 @@ const login = async (req, res) => {
 
   let user = await model.login(username);
   if (user.length > 0) {
-    const passwordIsMacth = bcrypt.compare(password, user[0].password);
+    const passwordIsMacth = verifyPassword(password, user[0].password);
     if (passwordIsMacth) {
       const payload = {
         userId: user[0].user_id,

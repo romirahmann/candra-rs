@@ -1,6 +1,6 @@
 const model = require("../../models/user.model");
 const api = require("../../tools/common");
-const bcrypt = require("bcrypt");
+const argon2 = require("argon2");
 
 const register = async (req, res) => {
   const newUser = req.body;
@@ -17,13 +17,17 @@ const register = async (req, res) => {
 const hashPassword = async (plainPassword) => {
   try {
     const saltRounds = 15;
-    const hashedPassword = await bcrypt.hash(plainPassword, saltRounds);
+    const hashedPassword = await argon2.hash(plainPassword, {
+      type: argon2.argon2id,
+    });
+    console.log(hashedPassword);
     return hashedPassword;
   } catch (e) {
     console.error("Error hasing password: ", e);
     throw e;
   }
 };
+
 module.exports = {
   register,
 };

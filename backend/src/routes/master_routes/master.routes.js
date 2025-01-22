@@ -4,9 +4,15 @@ const Joi = require("joi");
 
 const routesData = require("./routes.data.json");
 const UserController = require("../../controllers/master_controller/UserController");
+const EmployeeController = require("../../controllers/master_controller/EmployeeController");
+const ProsesController = require("../../controllers/master_controller/ProsesController");
+const TargetController = require("../../controllers/master_controller/TargetController");
 
 const controllers = {
   UserController,
+  EmployeeController,
+  ProsesController,
+  TargetController,
 };
 
 // Definisikan skema validasi untuk setiap rute

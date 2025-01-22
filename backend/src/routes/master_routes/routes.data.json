@@ -3,5 +3,80 @@
     "path": "/register",
     "method": "post",
     "controller": "UserController.register"
+  },
+  {
+    "path": "/employees",
+    "method": "get",
+    "controller": "EmployeeController.getEmployees"
+  },
+  {
+    "path": "/employee/:nik",
+    "method": "get",
+    "controller": "EmployeeController.getEmployee"
+  },
+  {
+    "path": "/employee",
+    "method": "post",
+    "controller": "EmployeeController.insertEmployee"
+  },
+  {
+    "path": "/employee/:nik",
+    "method": "put",
+    "controller": "EmployeeController.updateEmployee"
+  },
+  {
+    "path": "/employee/:nik",
+    "method": "delete",
+    "controller": "EmployeeController.deleteEmployee"
+  },
+  {
+    "path": "/prosess",
+    "method": "get",
+    "controller": "ProsesController.getAllProses"
+  },
+  {
+    "path": "/proses/:code",
+    "method": "get",
+    "controller": "ProsesController.getProsesByCode"
+  },
+  {
+    "path": "/proses",
+    "method": "post",
+    "controller": "ProsesController.insertProses"
+  },
+  {
+    "path": "/proses/:code",
+    "method": "put",
+    "controller": "ProsesController.updateProses"
+  },
+  {
+    "path": "/proses/:code",
+    "method": "delete",
+    "controller": "ProsesController.deleteProses"
+  },
+  {
+    "path": "/targets",
+    "method": "get",
+    "controller": "TargetController.getAllTarget"
+  },
+  {
+    "path": "/target/:id",
+    "method": "get",
+    "controller": "TargetController.getTargetById"
+  },
+  {
+    "path": "/target",
+    "method": "post",
+    "controller": "TargetController.insertTarget"
+  },
+  {
+    "path": "/target/:id",
+    "method": "put",
+    "controller": "TargetController.updateTarget"
+  },
+  {
+    "path": "/target/:id",
+    "method": "delete",
+    "controller": "TargetController.deleteTarget"
   }
 ]
