@@ -7,12 +7,14 @@ const UserController = require("../../controllers/master_controller/UserControll
 const EmployeeController = require("../../controllers/master_controller/EmployeeController");
 const ProsesController = require("../../controllers/master_controller/ProsesController");
 const TargetController = require("../../controllers/master_controller/TargetController");
+const MrController = require("../../controllers/master_controller/MrController");
 
 const controllers = {
   UserController,
   EmployeeController,
   ProsesController,
   TargetController,
+  MrController,
 };
 
 // Definisikan skema validasi untuk setiap rute

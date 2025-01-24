@@ -22,7 +22,7 @@
   {
     "path": "/employee/:nik",
     "method": "put",
-    "controller": "EmployeeController.updateEmployee"
+    "controller": "API EmployeeController.updateEmployee"
   },
   {
     "path": "/employee/:nik",
@@ -78,5 +78,41 @@
     "path": "/target/:id",
     "method": "delete",
     "controller": "TargetController.deleteTarget"
+  },
+
+  {
+    "path": "/data-mrs",
+    "method": "get",
+    "controller": "MrController.getAllMr"
+  },
+  {
+    "path": "/data-mr/nourut/:NoUrut/kodechecklist/:KodeChecklist",
+    "method": "get",
+    "controller": "MrController.getMrBuUrutChecklist"
+  },
+  {
+    "path": "/data-mr-nonakitf",
+    "method": "get",
+    "controller": "MrController.getAllNonaktif"
+  },
+  {
+    "path": "/data-mr",
+    "method": "post",
+    "controller": "MrController.addDataMr"
+  },
+  {
+    "path": "/data-mr/nourut/:NoUrut/kodechecklist/:KodeChecklist",
+    "method": "put",
+    "controller": "MrController.updateDataMr"
+  },
+  {
+    "path": "/data-mr-softDelete/nourut/:NoUrut/kodechecklist/:KodeChecklist",
+    "method": "put",
+    "controller": "MrController.softDelete"
+  },
+  {
+    "path": "/data-mr/nourut/:NoUrut/kodechecklist/:KodeChecklist",
+    "method": "delete",
+    "controller": "MrController.deleteDataMr"
   }
 ]

@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+const dataRoutes = require("./src/routes/master_routes/routes.data");
+
 const mainRoutes = require("./src/routes/routes");
 
 app.use(express.json());
@@ -9,10 +11,13 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.status(200).json({
+  const allRoutes = dataRoutes.map((route) => ({
     status: true,
-    service: "Backend Project Starter Kit",
-  });
+    api: `http://192.168.9.192:3000/api/master${route.path}`,
+    method: route.method,
+  }));
+
+  res.status(200).json(allRoutes);
 });
 
 app.use("/api/", mainRoutes);

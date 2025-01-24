@@ -6,7 +6,6 @@ const register = async (req, res) => {
   const newUser = req.body;
   try {
     newUser.password = await hashPassword(newUser.password);
-    console.log(newUser);
     let data = await model.insert(newUser);
     return api.ok(res, data);
   } catch (e) {
