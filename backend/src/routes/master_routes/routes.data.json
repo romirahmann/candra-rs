@@ -91,7 +91,7 @@
     "controller": "MrController.getMrBuUrutChecklist"
   },
   {
-    "path": "/data-mr-nonakitf",
+    "path": "/data-mr-nonaktif",
     "method": "get",
     "controller": "MrController.getAllNonaktif"
   },
